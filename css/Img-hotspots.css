@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+.notes {
+  margin: auto;
+  padding: 2rem 1.2rem 0;
+  max-width: 35rem;
+  font-family: Open Sans, sans serif;
+  text-align: center;
+}
+
+.lg-container {
+  max-width: 1240px;
+  position: relative;
+  margin: 1rem;
+  padding: 0;
+}
+
+.lg-image {
+  display: block;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+.lg-hotspot {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.lg-hotspot:hover .lg-hotspot__button, .lg-hotspot:active .lg-hotspot__button {
+  border-color: #ff774c;
+}
+
+.lg-hotspot:hover .lg-hotspot__button:after, .lg-hotspot:active .lg-hotspot__button:after {
+  background-color: #ff774c;
+}
+
+.lg-hotspot--selected {
+  z-index: 999;
+}
+
+.lg-hotspot--selected .lg-hotspot__label {
+  opacity: 1;
+}
+
+.lg-hotspot__button {
+  height: 48px;
+  width: 48px;
+  padding: 0px;
+  border-radius: 100%;
+  border: 1px solid #ff6000;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  -webkit-animation: button-pulse 7s ease-in-out infinite;
+          animation: button-pulse 7s ease-in-out infinite;
+}
+
+.lg-hotspot__button:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  pointer-events: none;
+  content: "";
+  display: block;
+  height: 16.8px;
+  width: 16.8px;
+  border-radius: 100%;
+  border: 3px solid white;
+  background-color: #ff6000;
+  -webkit-transition: border-color 1s linear;
+  transition: border-color 1s linear;
+}
+
+.lg-hotspot__label {
+  position: absolute;
+  width: 16em;
+  max-width: 50vw;
+  background-color: white;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: "Open Sans", sans-serif;
+  font-size: 14.5px;
+  line-height: 1.45em;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: 2px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  opacity: 0;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  padding: 10px;
+}
+
+.lg-hotspot__label h4 {
+  margin: 0;
+  padding: 0.65em 24px;
+  background-color: #555;
+  font-size: 1.1em;
+  font-weight: normal;
+  letter-spacing: 0.02em;
+  color: white;
+  border-radius: 2px 2px 0 0;
+}
+
+.lg-hotspot__label p {
+  margin: 0;
+  padding: 1.1em 24px 0 24px;
+  color: #333;
+}
+
+.lg-hotspot--top-left .lg-hotspot__label {
+  top: 24px;
+  left: 24px;
+}
+
+.lg-hotspot--top-right .lg-hotspot__label {
+  top: 24px;
+  right: 24px;
+}
+
+.lg-hotspot--bottom-right .lg-hotspot__label {
+  right: 24px;
+  bottom: 24px;
+}
+
+.lg-hotspot--bottom-left .lg-hotspot__label {
+  bottom: 24px;
+  left: 24px;
+}
+
+@-webkit-keyframes button-pulse {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: scale(1.15, 1.15);
+            transform: scale(1.15, 1.15);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+@keyframes button-pulse {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: scale(1.15, 1.15);
+            transform: scale(1.15, 1.15);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+.list_none_pl35 {
+  list-style: none;
+  padding-left: 35px;
+}
+
+.img-hotsot-home {
+  width: 585px;
+  float: right;
+  padding: 0 0 0 15px;
+}
+
+@media (max-width: 767px) {
+  .img-hotsot-home {
+    height: auto;
+    width: 100%;
+  }
+}
+
+.text-darkgrey {
+  color: darkgrey;
+}
+
+.block1 {
+  top: 56%;
+  left: 73%;
+}
+
+@media (max-width: 767px) {
+  .block1 {
+    top: 60%;
+    left: 42.35%;
+  }
+}
+
+.block2 {
+  top: 55%;
+  left: 80%;
+}
+
+@media (max-width: 767px) {
+  .block2 {
+    top: 66%;
+    left: 54.30%;
+  }
+}
+
+.block3 {
+  top: 60%;
+  left: 78.65%;
+}
+
+@media (max-width: 767px) {
+  .block3 {
+    top: 60%;
+    left: 59.3%;
+  }
+}
+
+@media (max-width: 767px) {
+  .at-homeslider .pogoSlider-slide {
+    top: 190px;
+  }
+}
+
+@media (max-width: 767px) {
+  .at-navigation ul li a {
+    color: #1e1e1e;
+  }
+}
+/*# sourceMappingURL=Img-hotspots.css.map */
